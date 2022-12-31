@@ -1,0 +1,407 @@
+@font-face {
+  font-family: "SFpro";
+  src: url("../fonts/SF-Pro-Text-Regular.otf");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "SFpro";
+  src: url("../fonts/SF-Pro-Text-Bold.otf");
+  font-style: normal;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Codec";
+  src: url(../fonts/codec.cold-trial-extrabold.ttf);
+}
+
+$black: #151515;
+$grey: #686868;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "SFpro", sans-serif;
+  background: white;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+  align-items: center;
+  padding: 0 30px;
+
+  .mobile-menu {
+    display: none;
+  }
+
+  .left-aligned {
+    display: grid;
+    grid-template-columns: 100px 400px;
+    grid-gap: 2vw;
+  }
+
+  .rotated {
+    transform: rotate(180deg);
+    transition: all 0.3s ease-in-out;
+  }
+  .menu {
+    display: none;
+  }
+
+  ul {
+    display: flex;
+    // justify-content: space-between;
+
+    li {
+      list-style: none;
+      a {
+        text-decoration: none;
+        padding: 0 1vw;
+        color: $grey;
+      }
+    }
+  }
+  .pop_out {
+    position: absolute;
+    width: 140px;
+    transform: translate(-50px, 20px);
+    opacity: 0;
+    padding: 20px 20px;
+    display: flex;
+    font-size: 14px;
+    flex-direction: column;
+    justify-content: left;
+    color: $grey;
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow: 10px 10px 47px #d5d4d4, -10px -10px 47px #fbfbfb;
+    // display: none;
+  }
+  .sub-menu {
+    padding: 0 0 10px 0;
+    display: flex;
+    align-items: center;
+  }
+  .sub-menu > img {
+    padding: 0 10px 0 0;
+  }
+  .pop_out2 {
+    position: absolute;
+    transform: translate(15px, 20px);
+    opacity: 0;
+    padding: 20px 20px;
+    color: #686868;
+    border-radius: 10px;
+    background: #ffffff;
+    font-size: 14px;
+    box-shadow: 10px 10px 47px #d5d4d4, -10px -10px 47px #fbfbfb;
+  }
+  .register {
+    border: $grey 1.5px solid;
+  }
+  .register:hover {
+    color: $black;
+    border: $black 2px solid;
+  }
+  .login:hover {
+    color: $black;
+  }
+}
+
+main {
+  display: flex;
+  padding: 0 8vw;
+  justify-content: space-between;
+
+  .hero-el {
+    margin: 135px 0 0 0;
+    h1 {
+      font-size: 80px;
+      font-family: "Codec";
+      line-height: 90px;
+      letter-spacing: -4px;
+      width: 32vw;
+    }
+    p {
+      width: 23vw;
+      text-align: left;
+      padding: 40px 0;
+      color: $grey;
+    }
+    button {
+      padding: 18px 32px;
+      border: none;
+      background: $black;
+      color: white;
+      font-weight: bold;
+      border-radius: 15px;
+      font-size: 18px;
+      margin: 0 0 10vh 0;
+      border: 1.5px solid $black;
+    }
+    button:hover {
+      background: white;
+      color: $black;
+      border: 1.5px solid $black;
+    }
+    .client-images img {
+      margin: 0 2.1vw 0 0;
+      padding: 10px 0px;
+      // display: flex;
+      // justify-content: space-between;
+      // height: 40px;
+      // width: auto;
+    }
+  }
+  .hero-img {
+    width: 450px;
+    height: 80vh;
+    // justify-content: flex-end;
+  }
+}
+
+//PROGRESSIVE MEDIA QUERY ADJUSTMENTS 😊
+@media (max-width: 900px) {
+  main {
+    flex-direction: column-reverse;
+    justify-content: center;
+    .hero-el {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      h1,
+      p {
+        text-align: center;
+        width: 100%;
+      }
+      button {
+        width: 30vw;
+        text-align: center;
+        margin: 0 auto 10vh auto;
+      }
+      .client-images {
+        text-align: center;
+      }
+    }
+    .hero-img {
+      width: 100%;
+      height: 55vh;
+      margin: 140px 0 0 0;
+      // justify-content: flex-end;
+    }
+  }
+  header {
+    .mobile-menu {
+      display: none;
+    }
+  }
+}
+
+//⚠Major header adjustments coming up⚠
+@media (max-width: 724px) {
+  //For when menu is present
+  .darken {
+    content: "";
+    position: fixed;
+    background-color: $black;
+    opacity: 0.7;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    overflow: hidden;
+    // backdrop-filter: blur(10px);
+    transition: 0.3s all ease-in-out;
+  }
+  header {
+    padding: 0;
+    width: 100vw;
+    .logo_menu-btn {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 30px;
+      width: 100vw;
+    }
+
+    .mobile-menu {
+      display: initial;
+    }
+
+    .menu {
+      display: initial;
+      text-align: right;
+      // z-index: 100;
+      // position: absolute;
+    }
+
+    #menu_options {
+      display: none;
+      height: 100vh;
+      width: 70vw;
+      border: 1px solid white;
+      transition: 0.3s all ease-in-out;
+      background: white;
+      z-index: 1000;
+      position: absolute;
+      transform: translate(-55vw, -58px);
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 20px 30px 0 30px;
+      .content {
+        line-height: 40px; ///////////////
+        margin: 50px 0 0 0;
+        .navlinks-mobile {
+          display: flex;
+          flex-direction: column;
+          transition: 0.2 all ease-in-out;
+          .feature-mobile.open > img {
+            transition: 0.2 all ease-in-out;
+            transform: rotate(180deg);
+          }
+        }
+        .enrollment-mobile {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          margin: auto;
+          text-align: center;
+          width: 60vw;
+          position: absolute;
+          line-height: 50px; ///////////////
+
+          .register {
+            padding: 3vw 22vw;
+            border-radius: 15px;
+          }
+        }
+
+        .pop_out-m {
+          display: none;
+        }
+
+        .pop_out-m.open {
+          display: flex;
+          transition: 0.2 all ease-in-out;
+          padding: 30px 20px 0 20px;
+          flex-direction: column;
+          // font-size: 14px;
+          line-height: 0px;
+        }
+
+        //For company
+        .pop_out2-m {
+          display: none;
+        }
+        .pop_out2-m.yo {
+          display: flex;
+          flex-direction: column;
+          padding: 30px 20px 0 20px;
+        }
+        .company-mobile.yo img {
+          transition: 0.2 all ease-in-out;
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    .navlinks,
+    .enrollment {
+      display: none;
+      //   text-align: right;
+    }
+  }
+
+  main {
+    // padding: 0;
+    .hero-img {
+      margin: 30px 0 0 0;
+      // width: 100vw;
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  // html{
+  //   overflow: hidden;
+  // }
+  main {
+    padding: 0;
+    //Edit this when you're back 😅
+    .hero-img {
+      height: 40vh;
+      margin: 0;
+    }
+    .hero-el {
+      // padding: 0 10px;
+      margin: 0;
+      // display: flex;
+      // justify-content: center;
+      // flex-direction: column;
+
+      h1 {
+        font-size: 8vw;
+        // font-family: "Codec";
+        // line-height: 90px;
+        letter-spacing: -1px;
+        // width: 25vw;
+      }
+      p {
+        width: 70vw;
+        font-size: 1rem;
+        padding: 0 0 3.78vh 0; //30px
+        text-align: center;
+        margin: auto;
+        line-height: /*25px*/ 3.156vh;
+        // letter-spacing: 0.1ch;
+      }
+      button {
+        // width: 30vw;
+        text-align: center;
+        margin: 0 auto 5.05vh auto; //50px
+        padding: 13px 60px;
+        font-size: 15px;
+        display: flex;
+        justify-content: center;
+      }
+      .client-images {
+        transform: scale(0.8);
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        justify-content: center;
+        width: 100vw;
+      }
+      .client-images img {
+        margin: 0;
+        padding: 0px;
+        margin: auto;
+      }
+    }
+  }
+}
+
+// //For mobile
+// @media (max-width: 480px) {
+//   .navlinks,
+//   .enrollment {
+//     display: none;
+//   }
+//   main {
+//     display: flex;
+//     flex-direction: column-reverse;
+//     .hero-img {
+//       height: 40vh;
+//       width: 100vw;
+//     }
+//     .hero-el{
+//         h1{
+//             font-size: 50px;
+//             font-family: "Codec";
+//             // line-height: 90px;
+//             letter-spacing: -4px;
+//         }
+//     }
+//   }
+// }

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="styles/style.css" />
+    <title>Frontend Mentor | Intro section with dropdown navigation</title>
+  </head>
+  <body>
+    <div class="layer"></div>
+    <header>
+      <div class="left-aligned">
+        <div class="logo_menu-btn">
+          <img src="images/logo.svg" srcset="" />
+
+          <!-- MENUUUUUUUUUUUUU FOR MOBIIIIIIILLLLLLLLLLLEEEEEEEEEEEE -->
+          <div class="mobile-menu">
+            <img
+              class="menu"
+              src="images/icon-menu.svg"
+              style="z-index: 99"
+              alt=""
+            />
+            <div id="menu_options">
+              <div class="content">
+                <!-- Mobile navlinks---------------------------------------------------------------- -->
+                <ul class="navlinks-mobile">
+                  <li>
+                    <a href="#" class="feature-mobile" onclick=""
+                      >Features <img src="images/icon-arrow-down.svg" />
+                      <div class="pop_out-m">
+                        <div class="sub-menu-m">
+                          <img src="images/icon-todo.svg" style="padding: 0 10px 0 0"/> Todo List
+                        </div>
+                        <div class="sub-menu-m">
+                          <img src="images/icon-calendar.svg" style="padding: 0 10px 0 0" />Calendar
+                        </div>
+                        <div class="sub-menu-m">
+                          <img src="images/icon-reminders.svg" style="padding: 0 10px 0 0" />Reminders
+                        </div>
+                        <div class="sub-menu-m">
+                          <img src="images/icon-planning.svg" style="padding: 0 10px 0 0" />Planning
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="company-mobile"
+                      >Company <img src="images/icon-arrow-down.svg" />
+                      <div class="pop_out2-m">
+                        <div class="sub-menu-m">History</div>
+                        <div class="sub-menu-m">Our Team</div>
+                        <div class="sub-menu-m">Blog</div>
+                      </div>
+                    </a>
+                  </li>
+                  <li><a href="#">Careers</a></li>
+                  <li><a href="#">About</a></li>
+                </ul>
+
+                <!-- Mobile navlinks end-------------------------------------------------------------------------- -->
+                <!-- Enrollment links for mobile for begin-------------------------------------------------------- -->
+                <ul class="enrollment-mobile">
+                  <li><a href="#" class="login-m">Login</a></li>
+                  <li>
+                    <a href="#" class="register">Register</a>
+                  </li>
+                </ul>
+                <!-- Enrollment links for mobile End!-------------------------------------------------------- -->
+              </div>
+              <img
+                src="images/icon-close-menu.svg"
+                class="close"
+                width="30px"
+                height="30px"
+                onclick="antiExpectedOutcome()"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+
+        <ul class="navlinks">
+          <li>
+            <a href="#" class="feature"
+              >Features <img src="images/icon-arrow-down.svg" />
+              <div class="pop_out">
+                <div class="sub-menu">
+                  <img src="images/icon-todo.svg" /> Todo List
+                </div>
+                <div class="sub-menu">
+                  <img src="images/icon-calendar.svg" />Calendar
+                </div>
+                <div class="sub-menu">
+                  <img src="images/icon-reminders.svg" />Reminders
+                </div>
+                <div class="sub-menu">
+                  <img src="images/icon-planning.svg" />Planning
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="company"
+              >Company <img src="images/icon-arrow-down.svg" />
+              <div class="pop_out2">
+                <div class="sub-menu">History</div>
+                <div class="sub-menu">Our Team</div>
+                <div class="sub-menu">Blog</div>
+              </div>
+            </a>
+          </li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
+      </div>
+
+      <ul class="enrollment right-aligned">
+        <li><a href="#" class="login">Login</a></li>
+        <li>
+          <a
+            href="#"
+            ,
+            style="padding: 10px 20px; border-radius: 9px"
+            ,
+            class="register"
+            >Register</a
+          >
+        </li>
+      </ul>
+    </header>
+    <main>
+      <div class="hero-el">
+        <h1>Make remote work</h1>
+        <p>
+          Get your team in sync, no matter your location. Streamline processes,
+          create team rituals, and watch productivity soar.
+        </p>
+        <button>Learn&nbsp;more</button>
+        <div class="client-images">
+          <img src="images/client-databiz.svg" />
+          <img src="images/client-audiophile.svg" />
+          <img src="images/client-meet.svg" />
+          <img src="images/client-maker.svg" />
+        </div>
+      </div>
+      <img src="images/image-hero-desktop.png" class="hero-img" alt="" />
+    </main>
+
+    <script src="main.js"></script>
+
+    <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+  </body>
+</html>
