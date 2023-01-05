@@ -329,7 +329,6 @@ main {
   // }
   main {
     padding: 0;
-    //Edit this when you're back 😅
     .hero-img {
       height: 40vh;
       margin: 0;
@@ -381,27 +380,3 @@ main {
     }
   }
 }
-
-// //For mobile
-// @media (max-width: 480px) {
-//   .navlinks,
-//   .enrollment {
-//     display: none;
-//   }
-//   main {
-//     display: flex;
-//     flex-direction: column-reverse;
-//     .hero-img {
-//       height: 40vh;
-//       width: 100vw;
-//     }
-//     .hero-el{
-//         h1{
-//             font-size: 50px;
-//             font-family: "Codec";
-//             // line-height: 90px;
-//             letter-spacing: -4px;
-//         }
-//     }
-//   }
-// }
